@@ -31,11 +31,16 @@ class Search extends React.Component {
         this.state.loadNumber = 16;
         this.state.offset = 0;
         this.state.loadMore = false;
+        this.state.isCat = false;
     }
     componentDidMount () {
         const query = window.location.search;
         const q = query.lastIndexOf('q=');
         let term = '';
+
+        if (query.substring(q + 2, query.length) === '%3D%5E..%5E%3D') {
+            this.state.isCat = true;
+        }
         if (q !== -1) {
             term = query.substring(q + 2, query.length).toLowerCase();
         }
@@ -46,6 +51,7 @@ class Search extends React.Component {
             term = term.substring(0, term.indexOf('&'));
         }
         term = decodeURI(term.split('+').join(' '));
+
         this.props.dispatch(navigationActions.setSearchTerm(term));
     }
     componentDidUpdate (prevProps) {
@@ -131,6 +137,18 @@ class Search extends React.Component {
             />
         );
         let searchAction = null;
+        if (this.state.isCat) {
+            searchAction = <h2 className="search-prompt">*boop*<br />=^..^=</h2>;
+
+            return (
+                <div
+                    id="projectBox"
+                    key="projectBox"
+                >
+                    {searchAction}
+                </div>
+            );
+        }
         if (this.state.loaded.length === 0 && this.state.offset !== 0) {
             searchAction = <h2 className="search-prompt"><FormattedMessage id="general.searchEmpty" /></h2>;
         } else if (this.state.loadMore) {
