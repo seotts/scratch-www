@@ -32,7 +32,8 @@ class Search extends React.Component {
         this.state.offset = 0;
         this.state.loadMore = false;
         this.state.isCat = false;
-        this.state.isUpsideDown = false; 
+        this.state.isUpsideDown = false;
+        this.state.isRainbow = false; 
     }
     componentDidMount () {
         const query = window.location.search;
@@ -55,6 +56,10 @@ class Search extends React.Component {
 
         if (term === 'upside down' || term === 'upsidedown') {
             this.makeSurprise('isUpsideDown');
+        }
+
+        if (term === 'rainbow' || term === 'rainbows') {
+            this.makeSurprise('isRainbow');
         }
 
         this.props.dispatch(navigationActions.setSearchTerm(term));
@@ -183,9 +188,20 @@ class Search extends React.Component {
             </div>
         );
     }
+
+    fancyStyle () {
+        if (this.state.isRainbow) {
+            return {
+                filter: hue-rotate(50deg)
+            };
+        }
+        
+        return {};
+    }
+
     render () {
         return (
-            <div>
+            <div style={this.fancyStyle()}>
                 <div className="outer">
                     <TitleBanner className="masthead">
                         <div className="inner">
