@@ -24,7 +24,8 @@ class Search extends React.Component {
         bindAll(this, [
             'getSearchState',
             'handleGetSearchMore',
-            'getTab'
+            'getTab',
+            'tick'
         ]);
         this.state = this.getSearchState();
         this.state.loaded = [];
@@ -33,7 +34,8 @@ class Search extends React.Component {
         this.state.loadMore = false;
         this.state.isCat = false;
         this.state.isUpsideDown = false;
-        this.state.isRainbow = false; 
+        this.state.isRainbow = false;
+        this.state.elapsed = 0;
     }
     componentDidMount () {
         const query = window.location.search;
@@ -60,6 +62,7 @@ class Search extends React.Component {
 
         if (term === 'rainbow' || term === 'rainbows') {
             this.makeSurprise('isRainbow');
+            setInterval(this.tick, 200);
         }
 
         this.props.dispatch(navigationActions.setSearchTerm(term));
@@ -68,6 +71,12 @@ class Search extends React.Component {
         if (this.props.searchTerm !== prevProps.searchTerm) {
             this.handleGetSearchMore();
         }
+    }
+
+    tick () {
+        this.setState(prevState => (
+            {elapsed: (prevState.elapsed + 10) % 360}
+        ));
     }
 
     makeSurprise (surprise) {
@@ -179,7 +188,7 @@ class Search extends React.Component {
             );
         }
         return (
-            <div
+            <div style={this.fancyStyle()}
                 id="projectBox"
                 key="projectBox"
             >
@@ -192,7 +201,7 @@ class Search extends React.Component {
     fancyStyle () {
         if (this.state.isRainbow) {
             return {
-                filter: hue-rotate(50deg)
+                filter: `hue-rotate(${this.state.elapsed}deg) saturate(400%)`
             };
         }
         
@@ -201,7 +210,7 @@ class Search extends React.Component {
 
     render () {
         return (
-            <div style={this.fancyStyle()}>
+            <div>
                 <div className="outer">
                     <TitleBanner className="masthead">
                         <div className="inner">
