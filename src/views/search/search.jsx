@@ -32,6 +32,7 @@ class Search extends React.Component {
         this.state.offset = 0;
         this.state.loadMore = false;
         this.state.isCat = false;
+        this.state.isUpsideDown = false; 
     }
     componentDidMount () {
         const query = window.location.search;
@@ -51,6 +52,10 @@ class Search extends React.Component {
             term = term.substring(0, term.indexOf('&'));
         }
         term = decodeURI(term.split('+').join(' '));
+
+        if (term === 'upside down' || term === 'upsidedown') {
+            this.makeSurprise('isUpsideDown');
+        }
 
         this.props.dispatch(navigationActions.setSearchTerm(term));
     }
@@ -129,11 +134,13 @@ class Search extends React.Component {
         }
         return allTab;
     }
+
     getProjectBox () {
         const results = (
             <Grid
                 cards
                 showAvatar
+                isUpsideDown={this.state.isUpsideDown}
                 itemType={this.state.tab}
                 items={this.state.loaded}
                 showFavorites={false}

@@ -18,6 +18,7 @@ const Grid = props => (
                             avatar={`https://cdn2.scratch.mit.edu/get_image/user/${item.author.id}_32x32.png`}
                             creator={item.author.username}
                             favorites={item.stats.favorites}
+                            isUpsideDown={props.isUpsideDown}
                             href={href}
                             key={key}
                             loves={item.stats.loves}
@@ -36,6 +37,7 @@ const Grid = props => (
                 }
                 return (
                     <Thumbnail
+                        isUpsideDown={props.isUpsideDown}
                         href={href}
                         key={key}
                         owner={item.owner}
