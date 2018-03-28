@@ -39,7 +39,7 @@ class Search extends React.Component {
         let term = '';
 
         if (query.substring(q + 2, query.length) === '%3D%5E..%5E%3D') {
-            this.state.isCat = true;
+            this.makeSurprise('isCat');
         }
         if (q !== -1) {
             term = query.substring(q + 2, query.length).toLowerCase();
@@ -59,6 +59,11 @@ class Search extends React.Component {
             this.handleGetSearchMore();
         }
     }
+
+    makeSurprise (surprise) {
+        this.setState({[surprise]: true});
+    }
+
     getSearchState () {
         let pathname = window.location.pathname.toLowerCase();
         if (pathname[pathname.length - 1] === '/') {
