@@ -16,6 +16,9 @@ const Tabs = require('../../components/tabs/tabs.jsx');
 const Page = require('../../components/page/www/page.jsx');
 const render = require('../../lib/render.jsx');
 
+const Scroll = require('react-scroll');
+const scroll = Scroll.animateScroll;
+
 require('./search.scss');
 
 class Search extends React.Component {
@@ -32,10 +35,12 @@ class Search extends React.Component {
         this.state.loadNumber = 16;
         this.state.offset = 0;
         this.state.loadMore = false;
+
         this.state.isCat = false;
         this.state.isUpsideDown = false;
         this.state.isRainbow = false;
         this.state.elapsed = 0;
+        this.state.isGravity = false;
     }
     componentDidMount () {
         const query = window.location.search;
@@ -65,12 +70,25 @@ class Search extends React.Component {
             setInterval(this.tick, 200);
         }
 
+        if (term === 'gravity') {
+            this.makeSurprise('isGravity');
+        }
+
         this.props.dispatch(navigationActions.setSearchTerm(term));
     }
+
     componentDidUpdate (prevProps) {
         if (this.props.searchTerm !== prevProps.searchTerm) {
             this.handleGetSearchMore();
         }
+    }
+
+    gravity () {
+        scroll.scrollToBottom({
+            duration: 1500,
+            delay: 100,
+            smooth: 'easeInQuart'
+        });
     }
 
     tick () {
@@ -118,6 +136,8 @@ class Search extends React.Component {
                 offset: currentOffset,
                 loadMore: willLoadMore
             });
+
+            if (this.state.isGravity) this.gravity();
         });
     }
     getTab (type) {
