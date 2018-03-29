@@ -9,7 +9,7 @@ const LanguageChooser = require('../../languagechooser/languagechooser.jsx');
 
 const frameless = require('../../../lib/frameless');
 
-const Confetti = require('react-confetti');
+const Surprise = require('./surprise.jsx');
 
 require('./footer.scss');
 
@@ -120,9 +120,7 @@ const Footer = props => (
                         </a>
                     </dd>
                     <dd>
-                        <a href="/">
-                            Surprise
-                        </a>
+                            <Surprise />
                     </dd>
                 </dl>
 

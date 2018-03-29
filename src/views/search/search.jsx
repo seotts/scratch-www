@@ -77,7 +77,7 @@ class Search extends React.Component {
             this.makeSurprise('isGravity');
         }
 
-        if (term === 'secret surprise' || term === 'secret surprises' || term === 'surprise' || term === 'surprises') {
+        if (term === 'secret surprise' || term === 'secret surprises') {
             this.makeSurprise('isSecretSurprise');
         }
 
@@ -238,7 +238,8 @@ class Search extends React.Component {
     render () {
         const confetti = (
             <Confetti
-                colors={['#f44336',
+                colors={
+                    ['#f44336',
                     '#e91e63',
                     '#9c27b0',
                     '#673ab7',
@@ -256,6 +257,8 @@ class Search extends React.Component {
                     '#FF5722'
                 ]}
                 height={window.innerHeight}
+                numberOfPieces={500}
+                recycle={false}
                 width={window.innerWidth}
             />
         );
@@ -274,8 +277,8 @@ class Search extends React.Component {
                         {this.getTab('studios')}
                     </Tabs>
                     <div>
-                    {this.state.isSecretSurprise ? confetti : ''}
-                    {this.getProjectBox()}
+                        {this.state.isSecretSurprise ? confetti : ''}
+                        {this.getProjectBox()}
                     </div>
                 </div>
             </div>
