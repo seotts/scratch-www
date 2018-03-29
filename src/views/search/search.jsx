@@ -16,6 +16,8 @@ const Tabs = require('../../components/tabs/tabs.jsx');
 const Page = require('../../components/page/www/page.jsx');
 const render = require('../../lib/render.jsx');
 
+const Confetti = require('react-confetti').default;
+
 const Scroll = require('react-scroll');
 const scroll = Scroll.animateScroll;
 
@@ -41,6 +43,7 @@ class Search extends React.Component {
         this.state.isRainbow = false;
         this.state.elapsed = 0;
         this.state.isGravity = false;
+        this.state.isSecretSurprise = false;
     }
     componentDidMount () {
         const query = window.location.search;
@@ -72,6 +75,10 @@ class Search extends React.Component {
 
         if (term === 'gravity') {
             this.makeSurprise('isGravity');
+        }
+
+        if (term === 'secret surprise' || term === 'secret surprises' || term === 'surprise' || term === 'surprises') {
+            this.makeSurprise('isSecretSurprise');
         }
 
         this.props.dispatch(navigationActions.setSearchTerm(term));
@@ -208,7 +215,7 @@ class Search extends React.Component {
             );
         }
         return (
-            <div style={this.fancyStyle()}
+            <div
                 id="projectBox"
                 key="projectBox"
             >
@@ -229,8 +236,31 @@ class Search extends React.Component {
     }
 
     render () {
+        const confetti = (
+            <Confetti
+                colors={['#f44336',
+                    '#e91e63',
+                    '#9c27b0',
+                    '#673ab7',
+                    '#3f51b5',
+                    '#2196f3',
+                    '#03a9f4',
+                    '#00bcd4',
+                    '#009688',
+                    '#4CAF50',
+                    '#8BC34A',
+                    '#CDDC39',
+                    '#FFEB3B',
+                    '#FFC107',
+                    '#FF9800',
+                    '#FF5722'
+                ]}
+                height={window.innerHeight}
+                width={window.innerWidth}
+            />
+        );
         return (
-            <div>
+            <div style={this.fancyStyle()}>
                 <div className="outer">
                     <TitleBanner className="masthead">
                         <div className="inner">
@@ -243,7 +273,10 @@ class Search extends React.Component {
                         {this.getTab('projects')}
                         {this.getTab('studios')}
                     </Tabs>
+                    <div>
+                    {this.state.isSecretSurprise ? confetti : ''}
                     {this.getProjectBox()}
+                    </div>
                 </div>
             </div>
         );
