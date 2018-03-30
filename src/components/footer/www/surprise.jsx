@@ -28,8 +28,8 @@ class Surprise extends React.Component {
                     fontSize: `4em`,
                     fontWeight: 'bold',
                     position: 'absolute',
-                    left: this.state.mousex + 25 - Math.random() * 50,
-                    top: this.state.mousey + window.pageYOffset - 75 - Math.random() * 50,
+                    left: this.state.mousex + (25 - (Math.random() * 50)),
+                    top: this.state.mousey + window.pageYOffset - (75 - (Math.random() * 50)),
                     userSelect: 'none'
                 },
                 elapsed: 0
@@ -50,7 +50,11 @@ class Surprise extends React.Component {
             uri: '/surprise'
         }, (err, body) => {
             if (err) return callback(err);
-            return callback(null, body.surprise);
+            try {
+                return callback(null, body.surprise);
+            } catch (e) {
+                return callback('404');
+            }
         });
     }
 
@@ -72,8 +76,8 @@ class Surprise extends React.Component {
         return (
             <div onMouseMove={this.handleMouseMove}>
                 <a
-                    onClick={this.handleClick}
                     style={{userSelect: 'none'}}
+                    onClick={this.handleClick}
                 >
                 Surprise
                 </a>
