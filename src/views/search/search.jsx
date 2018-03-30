@@ -77,7 +77,8 @@ class Search extends React.Component {
             this.makeSurprise('isGravity');
         }
 
-        if (term === 'secret surprise' || term === 'secret surprises') {
+        if (term === 'secret surprise' || term === 'secret surprises' ||
+            term === 'secretsurprises' || term === 'secretsurprise') {
             this.makeSurprise('isSecretSurprise');
         }
 
