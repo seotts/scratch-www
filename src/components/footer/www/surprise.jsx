@@ -29,7 +29,7 @@ class Surprise extends React.Component {
                     fontWeight: 'bold',
                     position: 'absolute',
                     left: this.state.mousex + (25 - (Math.random() * 50)),
-                    top: this.state.mousey + window.pageYOffset - (75 - (Math.random() * 50)),
+                    top: this.state.mousey + (window.pageYOffset - 75) - (Math.random() * 50),
                     userSelect: 'none'
                 },
                 elapsed: 0
@@ -65,8 +65,8 @@ class Surprise extends React.Component {
     getScore () {
         if (this.state.elapsed < 11) {
             const scoreStyle = Object.assign({}, this.state.scoreDisplay);
-            scoreStyle.opacity = 1 - this.state.elapsed / 10;
-            scoreStyle.top = scoreStyle.top - this.state.elapsed * 10;
+            scoreStyle.opacity = 1 - (this.state.elapsed / 10);
+            scoreStyle.top = scoreStyle.top - (this.state.elapsed * 10);
 
             return <div style={scoreStyle}>+{this.state.clicked}</div>;
         }
