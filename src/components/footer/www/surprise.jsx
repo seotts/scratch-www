@@ -20,8 +20,9 @@ class Surprise extends React.Component {
 
     handleClick () {
         this.postClick((err, count) => {
-            if (err) this.setState(prevState => ({clicked: prevState.clicked + 1}));
-            else this.setState({clicked: count});
+            const next = this.state.clicked + 1;
+            if (err) this.setState({clicked: next});
+            else this.setState({clicked: Math.max(count, next)});
 
             this.setState({
                 scoreDisplay: {
@@ -46,7 +47,6 @@ class Surprise extends React.Component {
     postClick (callback) {
         api({
             method: 'post',
-            host: '',
             uri: '/surprise'
         }, (err, body) => {
             if (err) return callback(err);
