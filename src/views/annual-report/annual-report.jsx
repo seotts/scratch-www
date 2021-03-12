@@ -449,7 +449,12 @@ class AnnualReport extends React.Component {
                                         <h3><FormattedMessage id="annualReport.missionProjectsTitle" /></h3>
                                         <p><FormattedMessage id="annualReport.missionProjectsDescription" /></p>
                                     </div>
-                                    <img src="/images/annual-report/mission/Projects Illustration.svg" />
+                                    <img
+                                        alt={
+                                            this.props.intl.formatMessage({id: 'annualReport.alt.projects'})
+                                        }
+                                        src="/images/annual-report/mission/Projects Illustration.svg"
+                                    />
                                 </div>
                             </MediaQuery>
                             <MediaQuery
@@ -461,7 +466,12 @@ class AnnualReport extends React.Component {
                                     <p><FormattedMessage id="annualReport.missionProjectsDescription" /></p>
                                 </div>
                                 <div className="small-p four-ps-projects">
-                                    <img src="/images/annual-report/mission/Projects Illustration.svg" />
+                                    <img
+                                        alt={
+                                            this.props.intl.formatMessage({id: 'annualReport.alt.projects'})
+                                        }
+                                        src="/images/annual-report/mission/Projects Illustration.svg"
+                                    />
                                 </div>
                             </MediaQuery>
                             <MediaQuery minWidth={frameless.tabletPortrait}>
@@ -470,7 +480,12 @@ class AnnualReport extends React.Component {
                                         <h3><FormattedMessage id="annualReport.missionPassionTitle" /></h3>
                                         <p><FormattedMessage id="annualReport.missionPassionDescription" /></p>
                                     </div>
-                                    <img src="/images/annual-report/mission/Passion Illustration.svg" />
+                                    <img
+                                        alt={
+                                            this.props.intl.formatMessage({id: 'annualReport.alt.passion'})
+                                        }
+                                        src="/images/annual-report/mission/Passion Illustration.svg"
+                                    />
                                 </div>
                             </MediaQuery>
                             <MediaQuery
@@ -484,7 +499,12 @@ class AnnualReport extends React.Component {
                                     </p>
                                 </div>
                                 <div className="small-p four-ps-passion">
-                                    <img src="/images/annual-report/mission/Passion Illustration.svg" />
+                                    <img
+                                        alt={
+                                            this.props.intl.formatMessage({id: 'annualReport.alt.passion'})
+                                        }
+                                        src="/images/annual-report/mission/Passion Illustration.svg"
+                                    />
                                 </div>
                             </MediaQuery>
                             <MediaQuery minWidth={frameless.tabletPortrait}>
