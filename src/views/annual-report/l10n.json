@@ -242,5 +242,9 @@
 
     "annualReport.donateTitle": "Support Us",
     "annualReport.donateMessage": "Your support enables us to make Scratch free for everyone, keeps our servers running, and most importantly, we are able to provide kids around the world an opportunity to imagine, create and share. Thank you!",
-    "annualReport.donateButton": "Donate"
+    "annualReport.donateButton": "Donate",
+
+    "annualReport.alt.threechildren": "Three children using Scratch on a computer",
+    "annualReport.alt.teamphoto": "About 30 members of the Scratch Team posing for a photo",
+    "annualReport.alt.bargraph": "Bar graph showing increase in new accounts in the online community year over year (growth from 4.2 million to 14.4 million)"
 }

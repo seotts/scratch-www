@@ -315,7 +315,12 @@ class AnnualReport extends React.Component {
                                     <FormattedMessage id="annualReport.mastheadTitle" />
                                 </h1>
                             </div>
-                            <img src="/images/annual-report/message/hero-image.png" />
+                            <img
+                                alt={
+                                    this.props.intl.formatMessage({id: 'annualReport.alt.threechildren'})
+                                }
+                                src="/images/annual-report/message/hero-image.png"
+                            />
                         </FlexRow>
                         <MediaQuery minWidth={frameless.desktop}>
                             <img
@@ -359,6 +364,9 @@ class AnnualReport extends React.Component {
                                         <FormattedMessage id="annualReport.messageSignature" />
                                     </p>
                                     <img
+                                        alt={
+                                            this.props.intl.formatMessage({id: 'annualReport.alt.teamphoto'})
+                                        }
                                         className="team-photo"
                                         src="/images/annual-report/message/team-photo.png"
                                     />
@@ -807,7 +815,12 @@ class AnnualReport extends React.Component {
                                         <FormattedMessage id="annualReport.reachGrowthBlurb" />
                                     </p>
                                 </div>
-                                <img src="/images/annual-report/reach/community-growth-graph.svg" />
+                                <img
+                                    alt={
+                                        this.props.intl.formatMessage({id: 'annualReport.alt.bargraph'})
+                                    }
+                                    src="/images/annual-report/reach/community-growth-graph.svg"
+                                />
                             </div>
                         </div>
                         <div className="map-inner">
