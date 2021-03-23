@@ -317,7 +317,7 @@ class AnnualReport extends React.Component {
                             </div>
                             <img
                                 alt={
-                                    this.props.intl.formatMessage({id: 'annualReport.alt.threechildren'})
+                                    this.props.intl.formatMessage({id: 'annualReport.threechildrenAlt'})
                                 }
                                 src="/images/annual-report/message/hero-image.png"
                             />
@@ -365,7 +365,7 @@ class AnnualReport extends React.Component {
                                     </p>
                                     <img
                                         alt={
-                                            this.props.intl.formatMessage({id: 'annualReport.alt.teamphoto'})
+                                            this.props.intl.formatMessage({id: 'annualReport.teamphotoAlt'})
                                         }
                                         className="team-photo"
                                         src="/images/annual-report/message/team-photo.png"
@@ -451,7 +451,7 @@ class AnnualReport extends React.Component {
                                     </div>
                                     <img
                                         alt={
-                                            this.props.intl.formatMessage({id: 'annualReport.alt.projects'})
+                                            this.props.intl.formatMessage({id: 'annualReport.projectsAlt'})
                                         }
                                         src="/images/annual-report/mission/Projects Illustration.svg"
                                     />
@@ -468,7 +468,7 @@ class AnnualReport extends React.Component {
                                 <div className="small-p four-ps-projects">
                                     <img
                                         alt={
-                                            this.props.intl.formatMessage({id: 'annualReport.alt.projects'})
+                                            this.props.intl.formatMessage({id: 'annualReport.projectsAlt'})
                                         }
                                         src="/images/annual-report/mission/Projects Illustration.svg"
                                     />
@@ -482,7 +482,7 @@ class AnnualReport extends React.Component {
                                     </div>
                                     <img
                                         alt={
-                                            this.props.intl.formatMessage({id: 'annualReport.alt.passion'})
+                                            this.props.intl.formatMessage({id: 'annualReport.passionAlt'})
                                         }
                                         src="/images/annual-report/mission/Passion Illustration.svg"
                                     />
@@ -501,7 +501,7 @@ class AnnualReport extends React.Component {
                                 <div className="small-p four-ps-passion">
                                     <img
                                         alt={
-                                            this.props.intl.formatMessage({id: 'annualReport.alt.passion'})
+                                            this.props.intl.formatMessage({id: 'annualReport.passionAlt'})
                                         }
                                         src="/images/annual-report/mission/Passion Illustration.svg"
                                     />
@@ -837,7 +837,7 @@ class AnnualReport extends React.Component {
                                 </div>
                                 <img
                                     alt={
-                                        this.props.intl.formatMessage({id: 'annualReport.alt.bargraph'})
+                                        this.props.intl.formatMessage({id: 'annualReport.bargraphAlt'})
                                     }
                                     src="/images/annual-report/reach/community-growth-graph.svg"
                                 />
