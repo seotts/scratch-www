@@ -513,7 +513,12 @@ class AnnualReport extends React.Component {
                                         <h3><FormattedMessage id="annualReport.missionPeersTitle" /></h3>
                                         <p><FormattedMessage id="annualReport.missionPeersDescription" /></p>
                                     </div>
-                                    <img src="/images/annual-report/mission/Peers Illustration.svg" />
+                                    <img
+                                        alt={
+                                            this.props.intl.formatMessage({id: 'annualReport.peersAlt'})
+                                        }
+                                        src="/images/annual-report/mission/Peers Illustration.svg"
+                                    />
                                 </div>
                             </MediaQuery>
                             <MediaQuery
@@ -525,7 +530,12 @@ class AnnualReport extends React.Component {
                                     <p><FormattedMessage id="annualReport.missionPeersDescription" /></p>
                                 </div>
                                 <div className="small-p four-ps-peers">
-                                    <img src="/images/annual-report/mission/Peers Illustration.svg" />
+                                    <img
+                                        alt={
+                                            this.props.intl.formatMessage({id: 'annualReport.peersAlt'})
+                                        }
+                                        src="/images/annual-report/mission/Peers Illustration.svg"
+                                    />
                                 </div>
                             </MediaQuery>
                             <MediaQuery minWidth={frameless.tabletPortrait}>
@@ -534,7 +544,12 @@ class AnnualReport extends React.Component {
                                         <h3><FormattedMessage id="annualReport.missionPlayTitle" /></h3>
                                         <p><FormattedMessage id="annualReport.missionPlayDescription" /></p>
                                     </div>
-                                    <img src="/images/annual-report/mission/Play Illustration.svg" />
+                                    <img
+                                        alt={
+                                            this.props.intl.formatMessage({id: 'annualReport.playAlt'})
+                                        }
+                                        src="/images/annual-report/mission/Play Illustration.svg"
+                                    />
                                 </div>
                             </MediaQuery>
                             <MediaQuery
@@ -546,7 +561,12 @@ class AnnualReport extends React.Component {
                                     <p><FormattedMessage id="annualReport.missionPlayDescription" /></p>
                                 </div>
                                 <div className="small-p four-ps-play">
-                                    <img src="/images/annual-report/mission/Play Illustration.svg" />
+                                    <img
+                                        alt={
+                                            this.props.intl.formatMessage({id: 'annualReport.playAlt'})
+                                        }
+                                        src="/images/annual-report/mission/Play Illustration.svg"
+                                    />
                                 </div>
                             </MediaQuery>
                         </div>
@@ -587,7 +607,12 @@ class AnnualReport extends React.Component {
                                         <p>
                                             <FormattedMessage id="annualReport.milestones2004Message" />
                                         </p>
-                                        <img src="/images/annual-report/milestones/2004_Clubhouse.jpg" />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.twoTeensAlt'})
+                                            }
+                                            src="/images/annual-report/milestones/2004_Clubhouse.jpg"
+                                        />
                                     </div>
                                     <div className="milestone-box last">
                                         <h4>
@@ -596,7 +621,12 @@ class AnnualReport extends React.Component {
                                         <p>
                                             <FormattedMessage id="annualReport.milestones2007Message" />
                                         </p>
-                                        <img src="/images/annual-report/milestones/2007_EarlyScratch.png" />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.twoTeensAlt'})
+                                            }
+                                            src="/images/annual-report/milestones/2007_EarlyScratch.png"
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -612,7 +642,12 @@ class AnnualReport extends React.Component {
                                         <p>
                                             <FormattedMessage id="annualReport.milestones2008Message" />
                                         </p>
-                                        <img src="/images/annual-report/milestones/2008_Conference.jpg" />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.conferencePhotoAlt'})
+                                            }
+                                            src="/images/annual-report/milestones/2008_Conference.jpg"
+                                        />
                                     </div>
                                     <div className="milestone-box">
                                         <h4>
@@ -621,7 +656,12 @@ class AnnualReport extends React.Component {
                                         <p>
                                             <FormattedMessage id="annualReport.milestones2009Message1.4" />
                                         </p>
-                                        <img src="/images/annual-report/milestones/2009_Scratch1_4.png" />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.scratch14Alt'})
+                                            }
+                                            src="/images/annual-report/milestones/2009_Scratch1_4.png"
+                                        />
                                     </div>
                                     <div className="milestone-box">
                                         <h4>
@@ -677,7 +717,12 @@ class AnnualReport extends React.Component {
                                         <p>
                                             <FormattedMessage id="annualReport.milestones2013MessageScratch2" />
                                         </p>
-                                        <img src="/images/annual-report/milestones/2013_Scratch2.png" />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.twoYoungPeopleAlt'})
+                                            }
+                                            src="/images/annual-report/milestones/2013_Scratch2.png"
+                                        />
                                     </div>
                                     <div className="milestone-box">
                                         <h4>
@@ -686,7 +731,12 @@ class AnnualReport extends React.Component {
                                         <p>
                                             <FormattedMessage id="annualReport.milestones2014Message" />
                                         </p>
-                                        <img src="/images/annual-report/milestones/2014_ScratchJr.jpg" />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.childScratchJrAlt'})
+                                            }
+                                            src="/images/annual-report/milestones/2014_ScratchJr.jpg"
+                                        />
                                     </div>
                                     <div className="milestone-box">
                                         <h4>
@@ -718,7 +768,12 @@ class AnnualReport extends React.Component {
                                         <p>
                                             <FormattedMessage id="annualReport.milestones2019MessageScratch3" />
                                         </p>
-                                        <img src="/images/annual-report/milestones/2019_Scratch3.jpg" />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.version3Alt'})
+                                            }
+                                            src="/images/annual-report/milestones/2019_Scratch3.jpg"
+                                        />
                                     </div>
                                     <div className="milestone-box">
                                         <h4>
