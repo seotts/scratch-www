@@ -909,7 +909,10 @@ class AnnualReport extends React.Component {
                                 <div className="map-key">
                                     <div className="map-scale">
                                         <div>0</div>
-                                        <img src="/images/annual-report/reach/Map Key.svg" />
+                                        <img
+                                            alt=""
+                                            src="/images/annual-report/reach/Map Key.svg"
+                                        />
                                         <div>
                                             <FormattedMessage id="annualReport.reachMap20M" />
                                         </div>
@@ -1085,10 +1088,16 @@ class AnnualReport extends React.Component {
                                 </div>
                                 <div className="hero">
                                     <img
+                                        alt={
+                                            this.props.intl.formatMessage({id: 'annualReport.microBitCraftsAlt'})
+                                        }
                                         className="left"
                                         src="/images/annual-report/initiatives/3.0 Left.svg"
                                     />
                                     <img
+                                        alt={
+                                            this.props.intl.formatMessage({id: 'annualReport.codingMicroBitAlt'})
+                                        }
                                         className="right"
                                         src="/images/annual-report/initiatives/3.0 Right.svg"
                                     />
@@ -1096,7 +1105,12 @@ class AnnualReport extends React.Component {
                                 <div className="inner">
                                     <div className="tools-extensions">
                                         <div className="tools-extension">
-                                            <img src="/images/annual-report/initiatives/Text-to-Speech Block.svg" />
+                                            <img
+                                                alt={
+                                                    this.props.intl.formatMessage({id: 'annualReport.textToSpeechBlockAlt'})
+                                                }
+                                                src="/images/annual-report/initiatives/Text-to-Speech Block.svg"
+                                            />
                                             <h4>
                                                 <FormattedMessage id="annualReport.toolsTexttoSpeech" />
                                             </h4>
@@ -1134,7 +1148,12 @@ class AnnualReport extends React.Component {
                                             </div>
                                         </div>
                                         <div className="tools-extension">
-                                            <img src="/images/annual-report/initiatives/Translation Block.svg" />
+                                            <img
+                                                alt={
+                                                    this.props.intl.formatMessage({id: 'annualReport.translateBlockAlt'})
+                                                }
+                                                src="/images/annual-report/initiatives/Translation Block.svg"
+                                            />
                                             <h4>
                                                 <FormattedMessage id="annualReport.toolsTranslate" />
                                             </h4>
@@ -1182,7 +1201,12 @@ class AnnualReport extends React.Component {
                                         </div>
                                     </div>
                                     <div className="tools-LEGO">
-                                        <img src="/images/annual-report/initiatives/LEGO Robotics Illustration.svg" />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.spikePrimeAlt'})
+                                            }
+                                            src="/images/annual-report/initiatives/LEGO Robotics Illustration.svg"
+                                        />
                                         <div className="tools-LEGO-info">
                                             <h4>
                                                 <FormattedMessage id="annualReport.toolsPhysicalWorld" />
@@ -1225,10 +1249,30 @@ class AnnualReport extends React.Component {
                                             <FormattedMessage id="annualReport.toolsTutorialsIntro" />
                                         </p>
                                         <div className="tutorial-list">
-                                            <img src="/images/annual-report/initiatives/animate a name.png" />
-                                            <img src="/images/annual-report/initiatives/make music.png" />
-                                            <img src="/images/annual-report/initiatives/imagine a world.png" />
-                                            <img src="/images/annual-report/initiatives/create a story.png" />
+                                            <img
+                                                alt={
+                                                    this.props.intl.formatMessage({id: 'annualReport.animateNameAlt'})
+                                                }
+                                                src="/images/annual-report/initiatives/animate a name.png"
+                                            />
+                                            <img
+                                                alt={
+                                                    this.props.intl.formatMessage({id: 'annualReport.makeMusicAlt'})
+                                                }
+                                                src="/images/annual-report/initiatives/make music.png"
+                                            />
+                                            <img
+                                                alt={
+                                                    this.props.intl.formatMessage({id: 'annualReport.imagineWorldAlt'})
+                                                }
+                                                src="/images/annual-report/initiatives/imagine a world.png"
+                                            />
+                                            <img
+                                                alt={
+                                                    this.props.intl.formatMessage({id: 'annualReport.createStoryAlt'})
+                                                }
+                                                src="/images/annual-report/initiatives/create a story.png"
+                                            />
                                         </div>
                                         <div className="tools-stats">
                                             <div className="tools-stat">
@@ -1288,7 +1332,12 @@ class AnnualReport extends React.Component {
                                                 />
                                             </p>
                                         </div>
-                                        <img src="/images/annual-report/initiatives/Offline Learning Illustration.svg" />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.tabletAppAlt'})
+                                            }
+                                            src="/images/annual-report/initiatives/Offline Learning Illustration.svg"
+                                        />
                                     </div>
                                     <div className="tools-abhi">
                                         <div className="subsection-tag">
@@ -1303,7 +1352,12 @@ class AnnualReport extends React.Component {
                                                     <FormattedMessage id="annualReport.toolsAbhiIntro" />
                                                 </p>
                                             </div>
-                                            <img src="/images/annual-report/initiatives/Abhi Hero.svg" />
+                                            <img
+                                                alt={
+                                                    this.props.intl.formatMessage({id: 'annualReport.abhiAlt'})
+                                                }
+                                                src="/images/annual-report/initiatives/Abhi Hero.svg"
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -1483,6 +1537,7 @@ class AnnualReport extends React.Component {
                                                     target="_blank"
                                                 >
                                                     <img
+                                                        alt=""
                                                         src="/images/annual-report/initiatives/Day in the Life Thumbnail.png"
                                                     />
                                                     <FormattedMessage id="annualReport.communityDayintheLife" />
@@ -1497,6 +1552,7 @@ class AnnualReport extends React.Component {
                                                     target="_blank"
                                                 >
                                                     <img
+                                                        alt=""
                                                         src="/images/annual-report/initiatives/Year 3000 Thumbnail.png"
                                                     />
                                                     <FormattedMessage id="annualReport.communityYear3000" />
@@ -1511,6 +1567,7 @@ class AnnualReport extends React.Component {
                                                     target="_blank"
                                                 >
                                                     <img
+                                                        alt=""
                                                         src="/images/annual-report/initiatives/Bounce Thumbnail.png"
                                                     />
                                                     <FormattedMessage id="annualReport.communityBounce" />
@@ -1525,6 +1582,7 @@ class AnnualReport extends React.Component {
                                                     target="_blank"
                                                 >
                                                     <img
+                                                        alt=""
                                                         src="/images/annual-report/initiatives/Monochromatic Thumbnail.png"
                                                     />
                                                     <FormattedMessage id="annualReport.communityMonochromatic" />
@@ -1621,7 +1679,12 @@ class AnnualReport extends React.Component {
                                             </p>
                                         </div>
                                         <div className="blm-image">
-                                            <img src="/images/annual-report/initiatives/BLM Hero.svg" />
+                                            <img
+                                                alt={
+                                                    this.props.intl.formatMessage({id: 'annualReport.blmFistAlt'})
+                                                }
+                                                src="/images/annual-report/initiatives/BLM Hero.svg"
+                                            />
                                             <span className="photo-credit">
                                                 <FormattedMessage id="annualReport.communityArtwork" />
                                             </span>
@@ -1778,10 +1841,30 @@ class AnnualReport extends React.Component {
                                     </div>
                                     <div className="four-pictures">
                                         {/* eslint-disable max-len */}
-                                        <img src="/images/annual-report/initiatives/schools/CPS Story/Family Night 1.png" />
-                                        <img src="/images/annual-report/initiatives/schools/CPS Story/Family Night 2.png" />
-                                        <img src="/images/annual-report/initiatives/schools/CPS Story/Family Night 3.png" />
-                                        <img src="/images/annual-report/initiatives/schools/CPS Story/Family Night 4.png" />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.FamilySmilingAlt'})
+                                            }
+                                            src="/images/annual-report/initiatives/schools/CPS Story/Family Night 1.png"
+                                        />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.FamilyProjectAlt'})
+                                            }
+                                            src="/images/annual-report/initiatives/schools/CPS Story/Family Night 2.png"
+                                        />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.TwoChildrenLaptopsAlt'})
+                                            }
+                                            src="/images/annual-report/initiatives/schools/CPS Story/Family Night 3.png"
+                                        />
+                                        <img
+                                            alt={
+                                                this.props.intl.formatMessage({id: 'annualReport.manyEducatorsAlt'})
+                                            }
+                                            src="/images/annual-report/initiatives/schools/CPS Story/Family Night 4.png"
+                                        />
                                         {/* eslint-enable max-len */}
                                     </div>
                                     <div className="pizza-img">

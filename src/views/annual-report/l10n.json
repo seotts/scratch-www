@@ -281,5 +281,6 @@
     "annualReport.attendeesAlSurAlt": "The attendees of Scratch al Sur posing for a group photo",
     "annualReport.attendeesEuropeAlt": "Attendees of the Scratch Conference Europe working on individual projects at a workshop",
     "annualReport.attendeesAfricaAlt": "Attendees of the Scratch Africa Conference sitting around a round table working on a project together",
-    "annualReport.davidSiegalAlt": "Photograph of David Siegel"
+    "annualReport.davidSiegalAlt": "Photograph of David Siegel",
+    "annualReport.textToSpeechBlockAlt": "Scratch Text-to-Speech extension block: speak \"hello\"",
 }
